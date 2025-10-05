@@ -1,138 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Electrical Works in Buildings</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>بحث أعمال الكهرباء في المباني</title>
+
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #eef2f3, #dfe9f3);
-    }
-    .hero {
-      background: linear-gradient(to right, #3b82f6, #06b6d4);
+      font-family: "Cairo", sans-serif;
+      background: linear-gradient(135deg, #0cc0df, #7b5ff3);
       color: white;
-      text-align: center;
-      padding: 4rem 1rem;
-      border-radius: 0 0 3rem 3rem;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-    .section-title {
+
+    header {
+      width: 100%;
+      text-align: center;
+      padding: 2rem 1rem;
+      background: rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
       font-size: 2rem;
-      font-weight: 700;
-      color: #1e3a8a;
+      margin-bottom: 0.5rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      width: 90%;
+      max-width: 1000px;
+      margin: 2rem 0;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(255, 255, 255, 0.4);
+    }
+
+    footer {
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.3);
+      width: 100%;
       text-align: center;
-      margin-top: 3rem;
-      margin-bottom: 2rem;
-      position: relative;
     }
-    .section-title::after {
-      content: "";
+
+    /* Modal styling */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .modal-content {
+      margin: auto;
       display: block;
-      width: 80px;
-      height: 4px;
-      background: linear-gradient(to right, #3b82f6, #06b6d4);
-      margin: 0.5rem auto 0;
-      border-radius: 2px;
+      max-width: 80%;
+      border-radius: 20px;
     }
-    .image-card {
-      transition: transform 0.3s, box-shadow 0.3s;
+
+    .close {
+      position: absolute;
+      top: 20px;
+      left: 35px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
     }
-    .image-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
+    .download-btn {
+      display: block;
+      margin: 1rem auto;
+      background: linear-gradient(45deg, #7b5ff3, #0cc0df);
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 30px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .download-btn:hover {
+      background: linear-gradient(45deg, #0cc0df, #7b5ff3);
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>بحث أعمال الكهرباء في المباني</h1>
+    <p>استعرض الصور والفيديوهات المتعلقة بأعمال الكهرباء في المباني</p>
+  </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Electrical Works in Buildings</h1>
-    <p class="text-lg md:text-xl max-w-2xl mx-auto">Explore the essential electrical systems that power our modern architecture — from wiring and lighting to smart technologies.</p>
-  </section>
+  <div class="gallery">
+    <img src="https://raw.githubusercontent.com/techa8017/Project1/main/download%20(1).jpeg" alt="صورة كهرباء 1" />
+    <img src="https://raw.githubusercontent.com/techa8017/Project1/main/download%20(2).jpeg" alt="صورة كهرباء 2" />
+    <img src="https://raw.githubusercontent.com/techa8017/Project1/main/download.jpeg" alt="صورة كهرباء 3" />
+    <img src="https://raw.githubusercontent.com/techa8017/Project1/main/images%20(1).jpeg" alt="صورة كهرباء 4" />
+    <img src="https://raw.githubusercontent.com/techa8017/Project1/main/images.jpeg" alt="صورة كهرباء 5" />
+  </div>
 
-  <!-- Intro Section -->
-  <section id="intro" class="px-6 md:px-20 py-10">
-    <h2 class="section-title">Introduction</h2>
-    <p class="text-gray-700 text-lg leading-relaxed text-center max-w-3xl mx-auto">
-      Electrical works in buildings ensure the safe and efficient distribution of power. 
-      They include wiring, lighting, safety systems, and smart automation that improve comfort and functionality.
-    </p>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-      <a data-fancybox="gallery" data-download-src="https://raw.githubusercontent.com/techa8017/Project1/main/download%20(1).jpeg" href="https://raw.githubusercontent.com/techa8017/Project1/main/download%20(1).jpeg">
-        <img src="https://raw.githubusercontent.com/techa8017/Project1/main/download%20(1).jpeg" class="rounded-2xl image-card" alt="Electrical Work 1">
-      </a>
-      <a data-fancybox="gallery" data-download-src="https://raw.githubusercontent.com/techa8017/Project1/main/download%20(2).jpeg" href="https://raw.githubusercontent.com/techa8017/Project1/main/download%20(2).jpeg">
-        <img src="https://raw.githubusercontent.com/techa8017/Project1/main/download%20(2).jpeg" class="rounded-2xl image-card" alt="Electrical Work 2">
-      </a>
-      <a data-fancybox="gallery" data-download-src="https://raw.githubusercontent.com/techa8017/Project1/main/download.jpeg" href="https://raw.githubusercontent.com/techa8017/Project1/main/download.jpeg">
-        <img src="https://raw.githubusercontent.com/techa8017/Project1/main/download.jpeg" class="rounded-2xl image-card" alt="Electrical Work 3">
-      </a>
-    </div>
-  </section>
-
-  <!-- Wiring Section -->
-  <section id="wiring" class="px-6 md:px-20 py-10 bg-white rounded-3xl shadow-md mx-4 md:mx-20 mt-10">
-    <h2 class="section-title">Wiring & Installation</h2>
-    <p class="text-gray-700 text-lg leading-relaxed text-center max-w-3xl mx-auto">
-      Wiring connects the entire electrical system — from the main panel to outlets, lighting, and smart devices. 
-      Proper planning ensures safety, energy efficiency, and easy maintenance.
-    </p>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-      <a data-fancybox="gallery" data-download-src="https://raw.githubusercontent.com/techa8017/Project1/main/images%20(1).jpeg" href="https://raw.githubusercontent.com/techa8017/Project1/main/images%20(1).jpeg">
-        <img src="https://raw.githubusercontent.com/techa8017/Project1/main/images%20(1).jpeg" class="rounded-2xl image-card" alt="Wiring 1">
-      </a>
-      <a data-fancybox="gallery" data-download-src="https://raw.githubusercontent.com/techa8017/Project1/main/images.jpeg" href="https://raw.githubusercontent.com/techa8017/Project1/main/images.jpeg">
-        <img src="https://raw.githubusercontent.com/techa8017/Project1/main/images.jpeg" class="rounded-2xl image-card" alt="Wiring 2">
-      </a>
-    </div>
-  </section>
-
-  <!-- Safety Section -->
-  <section id="safety" class="px-6 md:px-20 py-10">
-    <h2 class="section-title">Safety & Protection</h2>
-    <p class="text-gray-700 text-lg leading-relaxed text-center max-w-3xl mx-auto">
-      Safety systems like circuit breakers, grounding, and insulation prevent electrical hazards and ensure 
-      a reliable power supply throughout the building.
-    </p>
-
-    <div class="mt-10 text-center">
-      <a href="#intro" class="bg-gradient-to-r from-blue-600 to-cyan-400 text-white px-6 py-3 rounded-full shadow hover:opacity-90 transition">
-        Back to Top ↑
-      </a>
-    </div>
-  </section>
-
-  <footer class="text-center py-6 text-gray-600 text-sm">
-    © 2025 Electrical Works Research Project – All Rights Reserved.
+  <footer>
+    <p>© ٢٠٢٥ مشروع بحث أعمال الكهرباء في المباني</p>
   </footer>
 
+  <!-- Modal -->
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01" />
+    <a id="downloadLink" class="download-btn" download>تحميل الصورة</a>
+  </div>
+
   <script>
-    Fancybox.bind("[data-fancybox='gallery']", {
-      Toolbar: {
-        display: [
-          { id: "counter", position: "center" },
-          "zoom",
-          "slideshow",
-          "fullscreen",
-          "download",
-          "close"
-        ]
-      },
-      Thumbs: false,
-      compact: false,
-      animated: true,
-      dragToClose: true,
-      Image: {
-        zoom: true,
-      }
+    const modal = document.getElementById("myModal");
+    const modalImg = document.getElementById("img01");
+    const downloadLink = document.getElementById("downloadLink");
+    const closeBtn = document.getElementsByClassName("close")[0];
+
+    document.querySelectorAll(".gallery img").forEach((img) => {
+      img.addEventListener("click", () => {
+        modal.style.display = "block";
+        modalImg.src = img.src;
+        downloadLink.href = img.src;
+      });
     });
+
+    closeBtn.onclick = function () {
+      modal.style.display = "none";
+    };
+
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
   </script>
 </body>
 </html>
