@@ -1,93 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Electrical Works in Buildings</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
   <style>
-    body { font-family: 'Poppins', sans-serif; background-color: #f8fafc; }
-    section { scroll-margin-top: 80px; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #eef2f3, #dfe9f3);
+    }
+    .hero {
+      background: linear-gradient(to right, #3b82f6, #06b6d4);
+      color: white;
+      text-align: center;
+      padding: 4rem 1rem;
+      border-radius: 0 0 3rem 3rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1e3a8a;
+      text-align: center;
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(to right, #3b82f6, #06b6d4);
+      margin: 0.5rem auto 0;
+      border-radius: 2px;
+    }
+    .image-card {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .image-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
   </style>
 </head>
-<body class="text-gray-800">
-  <!-- Navbar -->
-  <nav class="fixed top-0 left-0 right-0 bg-gradient-to-r from-blue-700 to-cyan-400 text-white shadow-lg z-50">
-    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-      <h1 class="text-xl font-bold">Electrical Works in Buildings</h1>
-      <div class="space-x-4">
-        <a href="#intro" class="hover:underline">Intro</a>
-        <a href="#lighting" class="hover:underline">Lighting</a>
-        <a href="#wiring" class="hover:underline">Wiring</a>
-        <a href="#safety" class="hover:underline">Safety Systems</a>
-      </div>
-    </div>
-  </nav>
+<body>
 
-  <!-- Intro -->
-  <section id="intro" class="pt-28 pb-16 container mx-auto px-4">
-    <h2 class="text-3xl font-bold mb-4 text-blue-700">Introduction</h2>
-    <p class="mb-6 text-lg leading-relaxed">
-      Electrical works are one of the most essential stages in building construction. They include the design and installation of lighting systems, power distribution, and safety systems such as fire alarms and security networks.
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Electrical Works in Buildings</h1>
+    <p class="text-lg md:text-xl max-w-2xl mx-auto">Explore the essential electrical systems that power our modern architecture — from wiring and lighting to smart technologies.</p>
+  </section>
+
+  <!-- Intro Section -->
+  <section id="intro" class="px-6 md:px-20 py-10">
+    <h2 class="section-title">Introduction</h2>
+    <p class="text-gray-700 text-lg leading-relaxed text-center max-w-3xl mx-auto">
+      Electrical works in buildings ensure the safe and efficient distribution of power. 
+      They include wiring, lighting, safety systems, and smart automation that improve comfort and functionality.
     </p>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-      <img src="https://raw.githubusercontent.com/techa8017/Project1/main/download%20(1).jpeg" class="rounded-2xl shadow-md" alt="Electrical work 1">
-      <img src="https://raw.githubusercontent.com/techa8017/Project1/main/download%20(2).jpeg" class="rounded-2xl shadow-md" alt="Electrical work 2">
-      <img src="https://raw.githubusercontent.com/techa8017/Project1/main/download.jpeg" class="rounded-2xl shadow-md" alt="Electrical work 3">
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+      <a data-fancybox="gallery" data-download-src="https://raw.githubusercontent.com/techa8017/Project1/main/download%20(1).jpeg" href="https://raw.githubusercontent.com/techa8017/Project1/main/download%20(1).jpeg">
+        <img src="https://raw.githubusercontent.com/techa8017/Project1/main/download%20(1).jpeg" class="rounded-2xl image-card" alt="Electrical Work 1">
+      </a>
+      <a data-fancybox="gallery" data-download-src="https://raw.githubusercontent.com/techa8017/Project1/main/download%20(2).jpeg" href="https://raw.githubusercontent.com/techa8017/Project1/main/download%20(2).jpeg">
+        <img src="https://raw.githubusercontent.com/techa8017/Project1/main/download%20(2).jpeg" class="rounded-2xl image-card" alt="Electrical Work 2">
+      </a>
+      <a data-fancybox="gallery" data-download-src="https://raw.githubusercontent.com/techa8017/Project1/main/download.jpeg" href="https://raw.githubusercontent.com/techa8017/Project1/main/download.jpeg">
+        <img src="https://raw.githubusercontent.com/techa8017/Project1/main/download.jpeg" class="rounded-2xl image-card" alt="Electrical Work 3">
+      </a>
     </div>
   </section>
 
-  <!-- Lighting -->
-  <section id="lighting" class="py-16 bg-white">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-4 text-blue-700">Lighting Systems</h2>
-      <p class="mb-6 text-lg leading-relaxed">
-        Lighting systems are crucial for both aesthetics and functionality in architecture. A good lighting design ensures comfort, efficiency, and energy savings for building interiors and exteriors.
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-        <img src="https://raw.githubusercontent.com/techa8017/Project1/main/images%20(1).jpeg" class="rounded-2xl shadow-md" alt="Lighting Design 1">
-        <img src="https://raw.githubusercontent.com/techa8017/Project1/main/images.jpeg" class="rounded-2xl shadow-md" alt="Lighting Design 2">
-        <img src="https://raw.githubusercontent.com/techa8017/Project1/main/download%20(2).jpeg" class="rounded-2xl shadow-md" alt="Lighting Design 3">
-      </div>
-      <iframe class="w-full h-64 rounded-2xl shadow-md" src="https://www.youtube.com/embed/DV2HhEoqv1U" title="Lighting System Video" allowfullscreen></iframe>
+  <!-- Wiring Section -->
+  <section id="wiring" class="px-6 md:px-20 py-10 bg-white rounded-3xl shadow-md mx-4 md:mx-20 mt-10">
+    <h2 class="section-title">Wiring & Installation</h2>
+    <p class="text-gray-700 text-lg leading-relaxed text-center max-w-3xl mx-auto">
+      Wiring connects the entire electrical system — from the main panel to outlets, lighting, and smart devices. 
+      Proper planning ensures safety, energy efficiency, and easy maintenance.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+      <a data-fancybox="gallery" data-download-src="https://raw.githubusercontent.com/techa8017/Project1/main/images%20(1).jpeg" href="https://raw.githubusercontent.com/techa8017/Project1/main/images%20(1).jpeg">
+        <img src="https://raw.githubusercontent.com/techa8017/Project1/main/images%20(1).jpeg" class="rounded-2xl image-card" alt="Wiring 1">
+      </a>
+      <a data-fancybox="gallery" data-download-src="https://raw.githubusercontent.com/techa8017/Project1/main/images.jpeg" href="https://raw.githubusercontent.com/techa8017/Project1/main/images.jpeg">
+        <img src="https://raw.githubusercontent.com/techa8017/Project1/main/images.jpeg" class="rounded-2xl image-card" alt="Wiring 2">
+      </a>
     </div>
   </section>
 
-  <!-- Wiring -->
-  <section id="wiring" class="py-16 bg-gray-50">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-4 text-blue-700">Electrical Wiring</h2>
-      <p class="mb-6 text-lg leading-relaxed">
-        Electrical wiring involves all cables, conduits, switches, and sockets that distribute electricity safely through the building. Proper design and installation reduce hazards and ensure functionality.
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <img src="https://raw.githubusercontent.com/techa8017/Project1/main/download.jpeg" class="rounded-2xl shadow-md" alt="Wiring 1">
-        <img src="https://raw.githubusercontent.com/techa8017/Project1/main/download%20(1).jpeg" class="rounded-2xl shadow-md" alt="Wiring 2">
-        <img src="https://raw.githubusercontent.com/techa8017/Project1/main/images.jpeg" class="rounded-2xl shadow-md" alt="Wiring 3">
-      </div>
+  <!-- Safety Section -->
+  <section id="safety" class="px-6 md:px-20 py-10">
+    <h2 class="section-title">Safety & Protection</h2>
+    <p class="text-gray-700 text-lg leading-relaxed text-center max-w-3xl mx-auto">
+      Safety systems like circuit breakers, grounding, and insulation prevent electrical hazards and ensure 
+      a reliable power supply throughout the building.
+    </p>
+
+    <div class="mt-10 text-center">
+      <a href="#intro" class="bg-gradient-to-r from-blue-600 to-cyan-400 text-white px-6 py-3 rounded-full shadow hover:opacity-90 transition">
+        Back to Top ↑
+      </a>
     </div>
   </section>
 
-  <!-- Safety -->
-  <section id="safety" class="py-16 bg-white">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-4 text-blue-700">Safety and Protection Systems</h2>
-      <p class="mb-6 text-lg leading-relaxed">
-        Safety systems include fire alarms, CCTV surveillance, and access control systems. They are vital to protect both occupants and assets in modern architectural designs.
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-        <img src="https://raw.githubusercontent.com/techa8017/Project1/main/images%20(1).jpeg" class="rounded-2xl shadow-md" alt="Safety 1">
-        <img src="https://raw.githubusercontent.com/techa8017/Project1/main/download.jpeg" class="rounded-2xl shadow-md" alt="Safety 2">
-        <img src="https://raw.githubusercontent.com/techa8017/Project1/main/download%20(2).jpeg" class="rounded-2xl shadow-md" alt="Safety 3">
-      </div>
-      <iframe class="w-full h-64 rounded-2xl shadow-md" src="https://www.youtube.com/embed/FZzVZ4bEwYQ" title="Safety System Video" allowfullscreen></iframe>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="text-center py-6 bg-gradient-to-r from-blue-700 to-cyan-400 text-white">
-    <p>This research project was created for academic purposes - Faculty of Architecture</p>
+  <footer class="text-center py-6 text-gray-600 text-sm">
+    © 2025 Electrical Works Research Project – All Rights Reserved.
   </footer>
+
+  <script>
+    Fancybox.bind("[data-fancybox='gallery']", {
+      Toolbar: {
+        display: [
+          { id: "counter", position: "center" },
+          "zoom",
+          "slideshow",
+          "fullscreen",
+          "download",
+          "close"
+        ]
+      },
+      Thumbs: false,
+      compact: false,
+      animated: true,
+      dragToClose: true,
+      Image: {
+        zoom: true,
+      }
+    });
+  </script>
 </body>
 </html>
